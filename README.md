@@ -43,10 +43,10 @@ Steps:
 
  - Tasking
  - Setup
- - Build Prototype
- - hello, world
- - decide technology
- - Build System
+ - UI Prototype
+ - hello, world -> Boilerplate
+ - Technology Decision
+ - Build Pipeline
  - Coding
  - Testing
  - Deploy
@@ -75,26 +75,26 @@ Setup
  - Command Line
  - Git 
 
-Build Prototype
+UI Prototype
 ---
 
  - Design Prototype
  - HTML + CSS
  - GitHub Pages
 
-decide technology
+Technology Decision
 ---
 
  - Backend Framework
  - Frontend Framework
 
-hello, world
+hello, world -> Boilerplate
 ---
 
  - Boilerplate with Backend
  - Boilerplate with Frontend
 
-Build System
+Build Pipeline
 ---
 
  - Build Tools
