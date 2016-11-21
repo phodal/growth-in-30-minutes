@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Growth-in-minutes by phodal</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Growth-in-minutes</h1>
+        <h2>A Introduction for Growth Paper in Minutes</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/phodal/growth-in-minutes/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/phodal/growth-in-minutes/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/phodal/growth-in-minutes" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="真实世界的全栈工程师" class="anchor" href="#%E7%9C%9F%E5%AE%9E%E4%B8%96%E7%95%8C%E7%9A%84%E5%85%A8%E6%A0%88%E5%B7%A5%E7%A8%8B%E5%B8%88" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>真实世界的全栈工程师</h1>
+
+<blockquote>
+<p>30分钟了解《Growth：Web开发思想》</p>
+</blockquote>
+
+<p>在《Growth：Web开发思想》出版以前，请参考开源电子书《<a href="https://github.com/phodal/growth-in-action">Growth：全栈增长工程师实战</a>》与《<a href="https://github.com/phodal/growth-ebook">Growth: 全栈增长工程师指南</a>》。</p>
+
+<h2>
+<a id="引言精益与全栈" class="anchor" href="#%E5%BC%95%E8%A8%80%E7%B2%BE%E7%9B%8A%E4%B8%8E%E5%85%A8%E6%A0%88" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>引言：精益与全栈</h2>
+
+<p>在埃里克·莱斯的《精益创业》中提到了下面的精益环路：</p>
+
+<p><img src="images/lean-loop.jpg" alt="Lean创业"></p>
+
+<p>而精益的思想是<strong>在生产过程中减少的浪费</strong>，在软件开发的过程中最容易造成浪费的就是：</p>
+
+<ol>
+<li>业务人员对于市场的理解不一致，导致做不出用户所需要的产品。这部分可以通过精益环路来提高。</li>
+<li>开发人员对于需求的了解不清晰，导致结果与业务人员所需要的不一致。这部分则可以通过改善流程来解决。</li>
+<li>开发人员与第三方开发商的沟通问题。呵呵。</li>
+<li>团队内部的沟通与集成问题</li>
+</ol>
+
+<p>当我们讨论全栈的时候，我们就是想解决沟通带来的时间浪费问题。沟通不畅最好的例子就是<strong>巴别塔</strong>：</p>
+
+<p><img src="images/babie.jpg" alt="巴别塔"></p>
+
+<p>而前后端分离带来的第一个痛点就是：集成。如果你和我们一样采用敏捷开发流程的话，你就可以很容易看到这个问题了：</p>
+
+<p><img src="images/kanban.jpg" alt="看板"></p>
+
+<p>当你已经完成前端功能的时候，后端还没完成。你可能就需要开发额外的业务卡，最后等后端完成时再回来集成。尽管我们会在实践上使用基于契约的开发模式：</p>
+
+<p><img src="images/api-architecture-two.png" alt="契约API"></p>
+
+<p>但是一旦我们发现最初的契约不符合我们要求的时候，我们就需要重新修改前后端。这时对接这个 API 的人，就需要放下手头的工作来更新这个 API。</p>
+
+<p>尽管你们已经采用了迭代式开发，但是前后端分离在一夜又将软件开发放到了解放前的瀑布流：</p>
+
+<p><img src="images/waterfall.jpg" alt="瀑布流"></p>
+
+<p>在我最初的项目里，我们采用全功能团队的模式，主要是因为团队小——小的团队一遇到一两个人请假，就可能会出现风险。尽管后来我们的团队从6个人变成了12个人，我们仍然采用这种模式。我们采用结对编程是一个方面，另外一个方面是：团队里就需要有一个人来专门解决各种大小事务。如持续集成有问题、自动构建出错、测试有问题等等，没有人愿意专门去做这样的事。</p>
+
+<p>本文总结了正在撰写的《Growth：Web开发思想》里提出的一系列实践，为18个步骤:</p>
+
+<ul>
+<li>Tasking，即将目标切换成一个个小的任务，而这些任务尽可能的遵循 SMART 原则，如这里的 18 个步骤。</li>
+<li>Setup，搭建开发所需要的基本环境，并尽最大能力地去练习 IDE 及操作系统等等日常工具的使用。</li>
+<li>UI Prototype，可以使用简单的使用 UI 工具来创建 Web 页面的原型。</li>
+<li>Technology Decision，能根据我们的能力以及项目的需要，选择合适的工具。</li>
+<li>hello, world -&gt; Boilerplate，能自己搭建或者寻求一些比较好的 应用模板。</li>
+<li>Build Pipeline，可以设计出整个应用的构建流程，如依赖包管理、运行服务、执行语法检测、运行测试等等。</li>
+<li>Coding，至少能使用两门以上的语言，一门是 JavaScript，一门是编译语言。光只有动态语言，无法让你理解计算机语言的。</li>
+<li>Testing，可以编写单元测试、服务测试、UI自动化测试。</li>
+<li>Deploy，可以完整将应用部署到服务器上。</li>
+<li>Auto Deploy，要会在本地敲个命令，自动部署新版本的应用到服务器上。</li>
+<li>Analytics，不仅仅要知道很多用户喜欢这个功能，还要知道为什么。</li>
+<li>Optimization，即要知道程序中哪里用得多，又要能对代码进行优化。</li>
+<li>Continuous Intergration，除了学会使用持续集成工具，你还要学习什么是持续集成。</li>
+<li>Continuous Delivery，就是缺少一个在持续集成与自动化部署之间的按钮。</li>
+<li>Continuous Deployment，将持续交付的按钮变成自动化就完了？你要改变的不是代码本身 ，还有组织架构。</li>
+<li>SEO / ASO， 将用户导向你的应用是一门艺术。</li>
+<li>Retro，由输出结果来改入输入流程，这才能提高组织和自身的水平。</li>
+<li>Refactor，你以为只有代码和架构可以重构么？</li>
+</ul>
+
+<h2>
+<a id="任务切分" class="anchor" href="#%E4%BB%BB%E5%8A%A1%E5%88%87%E5%88%86" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>任务切分</h2>
+
+<blockquote>
+<p>即将目标切换成一个个小的任务，而这些任务尽可能的遵循 SMART 原则，如这里的 18 个步骤。</p>
+</blockquote>
+
+<p><img src="images/smart.png" alt="Tasking"></p>
+
+<h2>
+<a id="环境搭建" class="anchor" href="#%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>环境搭建</h2>
+
+<blockquote>
+<p>搭建开发所需要的基本环境，并尽最大能力地去练习 IDE 及操作系统等等日常工具的使用。</p>
+</blockquote>
+
+<p><img src="images/best-rby-editor.png" alt="开发工具"></p>
+
+<p>至少包含下面这些内容：</p>
+
+<ul>
+<li>IDE / Editor</li>
+<li>Package Management</li>
+<li>Quick Launch</li>
+<li>Command Line</li>
+<li>Git </li>
+</ul>
+
+<h2>
+<a id="ui原型" class="anchor" href="#ui%E5%8E%9F%E5%9E%8B" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>UI原型</h2>
+
+<blockquote>
+<p>可以使用简单的使用 UI 工具来创建 Web 页面的原型。</p>
+</blockquote>
+
+<p><img src="images/ui.jpg" alt="UI原型"></p>
+
+<p>你应该会下面的这些内容：</p>
+
+<ul>
+<li>Design Prototype</li>
+<li>HTML + CSS</li>
+</ul>
+
+<h2>
+<a id="技术选型" class="anchor" href="#%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>技术选型</h2>
+
+<blockquote>
+<p>能根据我们的能力以及项目的需要，选择合适的工具。</p>
+</blockquote>
+
+<p><img src="images/os-compare.jpg" alt="技术选型"></p>
+
+<p>至少要有：</p>
+
+<ul>
+<li>后台MVC框架</li>
+<li>数据库</li>
+<li>UI 框架</li>
+</ul>
+
+<h2>
+<a id="hello-world" class="anchor" href="#hello-world" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>hello, world</h2>
+
+<blockquote>
+<p>能自己搭建或者寻求一些比较好的应用模板</p>
+</blockquote>
+
+<p><img src="images/helloworld.jpg" alt="hello, world"></p>
+
+<h2>
+<a id="构建流" class="anchor" href="#%E6%9E%84%E5%BB%BA%E6%B5%81" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>构建流</h2>
+
+<blockquote>
+<p>可以设计出整个应用的构建流程，如依赖包管理、运行服务、执行语法检测、运行测试等等</p>
+</blockquote>
+
+<p><img src="images/build-web-project.png" alt="构建流"></p>
+
+<h2>
+<a id="编码" class="anchor" href="#%E7%BC%96%E7%A0%81" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>编码</h2>
+
+<blockquote>
+<p>至少能使用两门以上的语言，一门是 JavaScript，一门是编译语言。光只有动态语言，无法让你理解计算机语言的</p>
+</blockquote>
+
+<p><img src="images/coding.jpg" alt="编码"></p>
+
+<h2>
+<a id="测试" class="anchor" href="#%E6%B5%8B%E8%AF%95" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>测试</h2>
+
+<blockquote>
+<p>可以编写单元测试、服务测试、UI自动化测试</p>
+</blockquote>
+
+<p><img src="images/test-primard.png" alt="测试金字塔"></p>
+
+<h2>
+<a id="部署" class="anchor" href="#%E9%83%A8%E7%BD%B2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>部署</h2>
+
+<blockquote>
+<p>可以完整将应用部署到服务器上</p>
+</blockquote>
+
+<p><img src="images/deploy.jpg" alt="部署"></p>
+
+<p>你至少需要：</p>
+
+<ul>
+<li>HTTP 服务器</li>
+<li>CGI 或者类似的服务器</li>
+<li>进程管理工具</li>
+<li>语言版本管理工具</li>
+</ul>
+
+<h2>
+<a id="自动部署" class="anchor" href="#%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>自动部署</h2>
+
+<blockquote>
+<p>在本地敲个命令，自动部署新版本的应用到服务器上。</p>
+</blockquote>
+
+<p><img src="images/auto-deploy.jpg" alt="自动化部署"> </p>
+
+<h2>
+<a id="分析" class="anchor" href="#%E5%88%86%E6%9E%90" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>分析</h2>
+
+<blockquote>
+<p>不仅仅要知道很多用户喜欢这个功能，还要知道为什么。</p>
+</blockquote>
+
+<p><img src="images/lean-loop.jpg" alt="精益环路"></p>
+
+<p>除了使用诸如 Google Analytics / Piwik 这样的工具，对于日志来说你还需要有：</p>
+
+<p><img src="images/elk.png" alt="ELK"></p>
+
+<h2>
+<a id="优化" class="anchor" href="#%E4%BC%98%E5%8C%96" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>优化</h2>
+
+<blockquote>
+<p>即要知道程序中哪里用得多，又要能对代码进行优化。</p>
+</blockquote>
+
+<p>可以结合 New Relic 这样的 APM 工具进行性能分析。</p>
+
+<p><img src="images/new-relic.png" alt="性能分析"></p>
+
+<h2>
+<a id="持续集成" class="anchor" href="#%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>持续集成</h2>
+
+<blockquote>
+<p>除了学会使用持续集成工具，你还要学习什么是持续集成。</p>
+</blockquote>
+
+<p><img src="images/ci.jpg" alt="持续集成"></p>
+
+<ul>
+<li>Continuous Tools : Jenkins</li>
+</ul>
+
+<h2>
+<a id="持续交付" class="anchor" href="#%E6%8C%81%E7%BB%AD%E4%BA%A4%E4%BB%98" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>持续交付</h2>
+
+<blockquote>
+<p>就是缺少一个在持续集成与自动化部署之间的按钮。</p>
+</blockquote>
+
+<p><img src="images/cdelivery.jpg" alt="持续交付"></p>
+
+<ul>
+<li>Auto Package</li>
+</ul>
+
+<h2>
+<a id="持续部署" class="anchor" href="#%E6%8C%81%E7%BB%AD%E9%83%A8%E7%BD%B2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>持续部署</h2>
+
+<blockquote>
+<p>将持续交付的按钮变成自动化就完了？你要改变的不是代码本身 ，还有组织架构。</p>
+</blockquote>
+
+<p><img src="images/cd.png" alt="持续部署"></p>
+
+<p><img src="images/conway-law.jpg" alt="康威定律"></p>
+
+<h2>
+<a id="seo--aso" class="anchor" href="#seo--aso" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SEO / ASO</h2>
+
+<blockquote>
+<p>将用户导向你的应用是一门艺术。</p>
+</blockquote>
+
+<p><img src="images/seo.jpg" alt="搜索引擎优化"></p>
+
+<h2>
+<a id="回顾" class="anchor" href="#%E5%9B%9E%E9%A1%BE" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>回顾</h2>
+
+<blockquote>
+<p>由输出结果来改入输入流程，这才能提高组织和自身的水平。</p>
+</blockquote>
+
+<p><img src="images/retro.jpg" alt="Retro"></p>
+
+<p>Make it Right, Make it Better</p>
+
+<p><img src="images/input-output.png" alt="PID"></p>
+
+<h2>
+<a id="重构" class="anchor" href="#%E9%87%8D%E6%9E%84" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>重构</h2>
+
+<blockquote>
+<p>你以为只有代码和架构可以重构么？</p>
+</blockquote>
+
+<p><img src="images/refactor.png" alt="Refactor"></p>
+
+<p><img src="images/rework.png" alt="Rework"></p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
