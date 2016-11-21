@@ -1,4 +1,4 @@
-真实世界的全栈工程师
+真实世界的全栈工程师的十八项必备技能
 ===
 
 > 30分钟了解《Growth：Web开发思想》
@@ -67,6 +67,12 @@
 
 ![Tasking](images/smart.png)
 
+ - 具体的
+ - 可度量的
+ - 可实现的
+ - 相关的
+ - 时间可控的
+
 环境搭建
 ---
 
@@ -74,13 +80,13 @@
 
 ![开发工具](images/best-rby-editor.png)
 
-至少包含下面这些内容：
+至少达到下面的基本要求：
 
- - IDE / Editor
- - Package Management
- - Quick Launch
- - Command Line
- - Git 
+ - 有一个上手的 IDE 或者 编辑器
+ - 熟练使用包管理
+ - 使用快速启动工具
+ - 有一个好的命令行工具
+ - 熟练使用Git 或者 SVN
 
 UI原型
 ---
@@ -91,7 +97,7 @@ UI原型
 
 你应该会下面的这些内容：
 
- - Design Prototype
+ - 使用 UI 工具来设计原型
  - HTML + CSS
 
 技术选型
@@ -114,12 +120,20 @@ hello, world
 
 ![hello, world](images/helloworld.jpg)
 
+因此，你应该到 Web 前后端有一个明确的概念。
+
 构建流
 ---
 
 > 可以设计出整个应用的构建流程，如依赖包管理、运行服务、执行语法检测、运行测试等等
 
 ![构建流](images/build-web-project.png)
+
+你需要设计出这样的一个系统：
+
+ - 能帮助你提高开发效率
+ - 能帮助你提高代码质量
+ - 帮你运行各种测试
 
 编码
 ---
@@ -128,12 +142,31 @@ hello, world
 
 ![编码](images/coding.jpg)
 
+编码需要这么一些步骤：
+
+ - Kick Off
+ - Tasking
+ - 获取最新的代码
+ - 实现功能
+ - 编写测试
+ - 重构
+ - 本地提交代码
+ - 获取最新代码
+ - 运行测试
+ - 提交代码到远程服务器
+ - 等到 CI 构建完成
+
 测试
 ---
 
 > 可以编写单元测试、服务测试、UI自动化测试
 
 ![测试金字塔](images/test-primard.png)
+
+因此，你必须知道测试的基本类似：
+
+ - 状态测试
+ - 行为测试
 
 部署
 ---
@@ -154,8 +187,10 @@ hello, world
 
 > 在本地敲个命令，自动部署新版本的应用到服务器上。
 
-![自动化部署](images/auto-deploy.jpg) 
- 
+![自动化部署](images/auto-deploy.jpg)
+
+熟悉使用自动化配置管理工具，如 Ansible、Salt Stack 等等来改进部署流程
+
 分析
 ---
 
@@ -183,7 +218,7 @@ hello, world
 
 ![持续集成](images/ci.jpg)
 
- - Continuous Tools : Jenkins
+至少你应该熟练使用免费的开源集成工具：Jenkins
 
 持续交付
 ---
@@ -192,7 +227,11 @@ hello, world
 
 ![持续交付](images/cdelivery.jpg)
 
- - Auto Package
+持续集成完成后，你还需要：
+
+ - 自动部署代码到测试环境
+ - 运行集成测试
+ - 发布最新的包
 
 持续部署
 ---
@@ -200,6 +239,10 @@ hello, world
 > 将持续交付的按钮变成自动化就完了？你要改变的不是代码本身 ，还有组织架构。
 
 ![持续部署](images/cd.png)
+
+最简单的实现就是 GitHub Pages 了。
+
+> 设计系统的组织，其产生的设计等同于组织之内、组织之间的沟通结构。
 
 ![康威定律](images/conway-law.jpg)
 
@@ -209,7 +252,9 @@ SEO / ASO
 > 将用户导向你的应用是一门艺术。
 
 ![搜索引擎优化](images/seo.jpg)
- 
+
+知道 PageRank 么？
+
 回顾
 ---
 
@@ -229,4 +274,4 @@ Make it Right, Make it Better
 ![Refactor](images/refactor.png)
 
 ![Rework](images/rework.png)
- 
+
