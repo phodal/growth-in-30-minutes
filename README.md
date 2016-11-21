@@ -53,9 +53,9 @@ Steps:
  - Auto Deploy
  - Analytics
  - Performance
- - Continus Intergration
- - Continus Delivery
- - Continus Deployment
+ - Continuous Intergration
+ - Continuous Delivery
+ - Continuous Deployment
  - Retro 
  - Refactor
 
@@ -132,17 +132,17 @@ APM
 
  - Performance Analytics
 
-Continus Intergration
+Continuous Intergration
 ---
 
- - Continus Tools : Jenkins
+ - Continuous Tools : Jenkins
 
-Continus Delivery
+Continuous Delivery
 ---
 
  - Auto Package
 
-Continus Deployment
+Continuous Deployment
 ---
 
  - DevOps
