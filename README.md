@@ -39,32 +39,30 @@
 
 在我最初的项目里，我们采用全功能团队的模式，主要是因为团队小——小的团队一遇到一两个人请假，就可能会出现风险。尽管后来我们的团队从6个人变成了12个人，我们仍然采用这种模式。我们采用结对编程是一个方面，另外一个方面是：团队里就需要有一个人来专门解决各种大小事务。如持续集成有问题、自动构建出错、测试有问题等等，没有人愿意专门去做这样的事。
 
-Steps:
+本文总结了正在撰写的《Growth：Web开发思想》里提出的一系列实践，为18个步骤:
 
- - Tasking
- - Setup
- - UI Prototype
- - hello, world -> Boilerplate
- - Technology Decision
- - Build Pipeline
- - Coding
- - Testing
- - Deploy
- - Auto Deploy
- - Analytics
- - Performance
- - Continuous Intergration
- - Continuous Delivery
- - Continuous Deployment
- - Retro 
- - Refactor
-
-
+ - Tasking，即将目标切换成一个个小的任务，而这些任务尽可能的遵循 SMART 原则，如这里的 18 个步骤。
+ - Setup，搭建开发所需要的基本环境，并尽最大能力地去练习 IDE 及操作系统等等日常工具的使用。
+ - UI Prototype，可以使用简单的使用 UI 工具来创建 Web 页面的原型。
+ - Technology Decision，能根据我们的能力以及项目的需要，选择合适的工具。
+ - hello, world -> Boilerplate，能自己搭建或者寻求一些比较好的 应用模板。
+ - Build Pipeline，可以设计出整个应用的构建流程，如依赖包管理、运行服务、执行语法检测、运行测试等等。
+ - Coding，至少能使用两门以上的语言，一门是 JavaScript，一门是编译语言。光只有动态语言，无法让你理解计算机语言的。
+ - Testing，可以编写单元测试、服务测试、UI自动化测试。
+ - Deploy，可以完整将应用部署到服务器上。
+ - Auto Deploy，要会在本地敲个命令，自动部署新版本的应用到服务器上。
+ - Analytics，不仅仅要知道很多用户喜欢这个功能，还要知道为什么。
+ - Optimization，即要知道程序中哪里用得多，又要能对代码进行优化。
+ - Continuous Intergration，除了学会使用持续集成工具，你还要学习什么是持续集成。
+ - Continuous Delivery，就是缺少一个在持续集成与自动化部署之间的按钮。
+ - Continuous Deployment，将持续交付的按钮变成自动化就完了？你要改变的不是代码本身 ，还有组织架构。
+ - Retro，由输出结果来改入输入流程，这才能提高组织和自身的水平。
+ - Refactor，你所以只有代码和架构可以重构么？
 
 Tasking
 ---
 
-![Tasking](images/tasking.png)
+![Tasking](images/smart.png)
 
 Setup
 ---
@@ -127,7 +125,7 @@ Analytics
 
  - Google Analytics / Piwik
 
-APM
+Optimization
 ---
 
  - Performance Analytics
