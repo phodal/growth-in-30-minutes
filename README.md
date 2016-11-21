@@ -56,18 +56,25 @@
  - Continuous Intergration，除了学会使用持续集成工具，你还要学习什么是持续集成。
  - Continuous Delivery，就是缺少一个在持续集成与自动化部署之间的按钮。
  - Continuous Deployment，将持续交付的按钮变成自动化就完了？你要改变的不是代码本身 ，还有组织架构。
+ - SEO / ASO， 将用户导向你的应用是一门艺术。
  - Retro，由输出结果来改入输入流程，这才能提高组织和自身的水平。
- - Refactor，你所以只有代码和架构可以重构么？
+ - Refactor，你以为只有代码和架构可以重构么？
 
 任务切分
 ---
+
+> 即将目标切换成一个个小的任务，而这些任务尽可能的遵循 SMART 原则，如这里的 18 个步骤。
 
 ![Tasking](images/smart.png)
 
 环境搭建
 ---
 
+> 搭建开发所需要的基本环境，并尽最大能力地去练习 IDE 及操作系统等等日常工具的使用。
+
 ![开发工具](images/best-rby-editor.png)
+
+至少包含下面这些内容：
 
  - IDE / Editor
  - Package Management
@@ -78,84 +85,101 @@
 UI原型
 ---
 
+> 可以使用简单的使用 UI 工具来创建 Web 页面的原型。
+
 ![UI原型](images/ui.jpg)
+
+你应该会下面的这些内容：
 
  - Design Prototype
  - HTML + CSS
- - GitHub Pages
 
 技术选型
 ---
 
+> 能根据我们的能力以及项目的需要，选择合适的工具。
+
 ![技术选型](images/os-compare.jpg)
 
- - Backend Framework
- - Frontend Framework
+至少要有：
+
+ - 后台MVC框架
+ - 数据库
+ - UI 框架
 
 hello, world
 ---
 
-![hello, world](images/helloworld.jpg)
+> 能自己搭建或者寻求一些比较好的应用模板
 
- - Boilerplate with Backend
- - Boilerplate with Frontend
+![hello, world](images/helloworld.jpg)
 
 构建流
 ---
 
-![构建流](images/build-web-project.png)
+> 可以设计出整个应用的构建流程，如依赖包管理、运行服务、执行语法检测、运行测试等等
 
- - Build Tools
- - Build Process
+![构建流](images/build-web-project.png)
 
 编码
 ---
 
+> 至少能使用两门以上的语言，一门是 JavaScript，一门是编译语言。光只有动态语言，无法让你理解计算机语言的
+
 ![编码](images/coding.jpg)
 
- - Merge Prototype
- - MVC
- 
 测试
 ---
 
-![测试金字塔](images/test-primard.png)
+> 可以编写单元测试、服务测试、UI自动化测试
 
- - Test Primrad
+![测试金字塔](images/test-primard.png)
 
 部署
 ---
 
+> 可以完整将应用部署到服务器上
+
 ![部署](images/deploy.jpg)
 
- - HTTP Server
- - WSGI / CGI Server
+你至少需要：
+
+ - HTTP 服务器
+ - CGI 或者类似的服务器
+ - 进程管理工具
+ - 语言版本管理工具
 
 自动部署
 ---
 
-![自动化部署](images/auto-deploy.jpg)
- 
-  - AutoDeploy Tool
+> 在本地敲个命令，自动部署新版本的应用到服务器上。
+
+![自动化部署](images/auto-deploy.jpg) 
  
 分析
 ---
 
+> 不仅仅要知道很多用户喜欢这个功能，还要知道为什么。
+
 ![精益环路](images/lean-loop.jpg)
 
-![ELK](images/elk.png)
+除了使用诸如 Google Analytics / Piwik 这样的工具，对于日志来说你还需要有：
 
- - Google Analytics / Piwik
+![ELK](images/elk.png)
 
 优化
 ---
 
-![性能分析](images/new-relic.png)
+> 即要知道程序中哪里用得多，又要能对代码进行优化。
 
- - Performance Analytics
+可以结合 New Relic 这样的 APM 工具进行性能分析。
+
+![性能分析](images/new-relic.png)
 
 持续集成
 ---
+
+> 除了学会使用持续集成工具，你还要学习什么是持续集成。
 
 ![持续集成](images/ci.jpg)
 
@@ -164,6 +188,8 @@ hello, world
 持续交付
 ---
 
+> 就是缺少一个在持续集成与自动化部署之间的按钮。
+
 ![持续交付](images/cdelivery.jpg)
 
  - Auto Package
@@ -171,31 +197,34 @@ hello, world
 持续部署
 ---
 
+> 将持续交付的按钮变成自动化就完了？你要改变的不是代码本身 ，还有组织架构。
+
 ![持续部署](images/cd.png)
 
 ![康威定律](images/conway-law.jpg)
 
- - DevOps
- - Conway's Lay
-
-SEO
+SEO / ASO
 ---
 
-![搜索引擎优化](images/seo.jpg)
+> 将用户导向你的应用是一门艺术。
 
- - Why
+![搜索引擎优化](images/seo.jpg)
  
 Retro 
 ---
 
+> 由输出结果来改入输入流程，这才能提高组织和自身的水平。
+
 ![Retro](images/retro.jpg)
+
+Make it Right, Make it Better
 
 ![PID](images/input-output.png)
 
- - Make it Right, Make it Better
-
 Refactor
 ---
+
+> 你以为只有代码和架构可以重构么？
 
 ![Refactor](images/refactor.png)
 
