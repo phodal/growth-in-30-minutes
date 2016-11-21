@@ -210,7 +210,7 @@ SEO / ASO
 
 ![搜索引擎优化](images/seo.jpg)
  
-Retro 
+回顾
 ---
 
 > 由输出结果来改入输入流程，这才能提高组织和自身的水平。
@@ -221,7 +221,7 @@ Make it Right, Make it Better
 
 ![PID](images/input-output.png)
 
-Refactor
+重构
 ---
 
 > 你以为只有代码和架构可以重构么？
