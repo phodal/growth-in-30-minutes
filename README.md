@@ -59,13 +59,15 @@
  - Retro，由输出结果来改入输入流程，这才能提高组织和自身的水平。
  - Refactor，你所以只有代码和架构可以重构么？
 
-Tasking
+任务切分
 ---
 
 ![Tasking](images/smart.png)
 
-Setup
+环境搭建
 ---
+
+![开发工具](images/best-rby-editor.png)
 
  - IDE / Editor
  - Package Management
@@ -73,75 +75,105 @@ Setup
  - Command Line
  - Git 
 
-UI Prototype
+UI原型
 ---
+
+![UI原型](images/ui.jpg)
 
  - Design Prototype
  - HTML + CSS
  - GitHub Pages
 
-Technology Decision
+技术选型
 ---
+
+![技术选型](images/os-compare.jpg)
 
  - Backend Framework
  - Frontend Framework
 
-hello, world -> Boilerplate
+hello, world
 ---
+
+![hello, world](images/helloworld.jpg)
 
  - Boilerplate with Backend
  - Boilerplate with Frontend
 
-Build Pipeline
+构建流
 ---
+
+![构建流](images/build-web-project.png)
 
  - Build Tools
  - Build Process
 
-Coding
+编码
 ---
+
+![编码](images/coding.jpg)
 
  - Merge Prototype
  - MVC
  
-Testing
+测试
 ---
+
+![测试金字塔](images/test-primard.png)
 
  - Test Primrad
 
-Deploy
+部署
 ---
+
+![部署](images/deploy.jpg)
 
  - HTTP Server
  - WSGI / CGI Server
 
-Auto Deploy
+自动部署
 ---
+
+![自动化部署](images/auto-deploy.jpg)
  
   - AutoDeploy Tool
  
-Analytics
+分析
 ---
+
+![精益环路](images/lean-loop.jpg)
+
+![ELK](images/elk.png)
 
  - Google Analytics / Piwik
 
-Optimization
+优化
 ---
+
+![性能分析](images/new-relic.png)
 
  - Performance Analytics
 
-Continuous Intergration
+持续集成
 ---
+
+![持续集成](images/ci.jpg)
 
  - Continuous Tools : Jenkins
 
-Continuous Delivery
+持续交付
 ---
+
+![持续交付](images/cdelivery.jpg)
 
  - Auto Package
 
-Continuous Deployment
+持续部署
 ---
+
+![持续部署](images/cd.png)
+
+![康威定律](images/conway-law.jpg)
 
  - DevOps
  - Conway's Lay
@@ -149,15 +181,23 @@ Continuous Deployment
 SEO
 ---
 
+![搜索引擎优化](images/seo.jpg)
+
  - Why
  
 Retro 
 ---
+
+![Retro](images/retro.jpg)
+
+![PID](images/input-output.png)
 
  - Make it Right, Make it Better
 
 Refactor
 ---
 
- - TDD
+![Refactor](images/refactor.png)
+
+![Rework](images/rework.png)
  
