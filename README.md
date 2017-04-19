@@ -1,4 +1,4 @@
-30分钟了解《Growth：全栈Web开发思想》
+30分钟了解《全栈应用开发：精益实践》
 ===
 
 在《Growth：全栈Web开发思想》出版以前，请参考开源电子书《[Growth：全栈增长工程师实战](https://github.com/phodal/growth-in-action)》与《[Growth: 全栈增长工程师指南](https://github.com/phodal/growth-ebook)》。
